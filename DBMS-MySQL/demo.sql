@@ -1,0 +1,11 @@
+CREATE DATABASE inventoryDB;
+USE inventoryDB;
+CREATE TABLE products(name  varchar(50),  description varchar(100) , price decimal , quantity integer , category varchar(100));
+INSERT INTO products VALUES ('Himalaya neem face wash', 'Its  refreshing and removes dirt', 550.00, 6 , 'Himalayas');
+INSERT INTO products VALUES ('Moraze Matte liquid lipstick', 'It helps to maintain lips hydration,exact matte result' , 700.00 , 10 , 'Moraze');
+INSERT INTO products VALUES ('Lakme Blush Glow Sheet Mask' , 'It give result of fruit facial, It gives glow to the face' , 450.00 , 4 , 'Lakme');
+SELECT * FROM products;
+SELECT name,description,price,quantity,category FROM products WHERE price<500.00 ;
+SELECT name,description,price,quantity,category FROM products WHERE quantity>5 ;
+UPDATE products SET price=450 WHERE name='Himalaya neem face wash';
+DELETE FROM products WHERE name='Lakme Blush Glow Sheet Mask' ;
